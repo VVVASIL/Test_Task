@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal page</title>
+</head>
+<body>
+
+<h1> Вы зарегистрированы и Ваша цена зафиксирована. </h1>
+<br>
+<h1> Ваша цена: </h1>
+<br>
+    <h2 th:utext="${preg.getPriceWhenRegistration()}">Price</h2>
+
+</form>
+
+</body>
+</html>

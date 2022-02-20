@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal page</title>
+</head>
+<body>
+
+<h1> Добро пожаловать на сервис! </h1>
+
+<br>
+
+<h1> Выберите, пожалуйста, необходимый для Вас раздел:  </h1>
+
+<br>
+<h2> <a th:href="@{/info}"> Просмотреть список доступных валют</a></h2>
+<h2> <a th:href="@{/price}"> Просмотреть актуальные цены валют</a></h2>
+<h2> <a th:href="@{/register}"> Зарегистрироваться и зафиксировать цену</a></h2>
+</body>
+</html>

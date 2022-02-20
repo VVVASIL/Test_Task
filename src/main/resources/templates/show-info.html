@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal page</title>
+</head>
+<body>
+
+<h3> Список доступных валют:</h3>
+
+<br>
+<br>
+<table border="5">
+    <tr>
+        <th>Уникальный ID валюты </th>
+        <th>Название валюты</th>
+    </tr>
+
+    <tr th:each="lst : ${coinsInfo}">
+        <td th:utext="${lst.getSymbolId()}">ID</td>
+        <td th:utext="${lst.getSymbol()}">Symbol</td>
+    </tr>
+
+</table>
+</body>
+</html>
