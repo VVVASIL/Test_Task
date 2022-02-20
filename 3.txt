@@ -1,0 +1,6 @@
+CREATE TABLE `price` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `id_symbol` int DEFAULT NULL,
+  `price_usd` double DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
