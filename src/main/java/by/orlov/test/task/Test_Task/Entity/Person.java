@@ -17,7 +17,7 @@ public class Person {
     @Column(name = "price")
     private Double priceWhenRegistration;
     @Column(name = "changeP")
-    public boolean changePrice = false;
+    public boolean changePrice;
 
     public Person(int id, String login, Double priceWhenRegistration) {
         this.id = id;
@@ -59,8 +59,11 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Пользователь зарегистрировался и выбрал монету под " +
-                "id = " + id +
-                ", имя пользователя: " + login;
+        if (id ==90 || id == 80 || id == 48543) {
+            return "Пользователь зарегистрировался и выбрал монету под " +
+                    "id = " + id +
+                    ", имя пользователя: " + login;
+        }
+        return "Был введён некорректный ID валюты";
     }
 }

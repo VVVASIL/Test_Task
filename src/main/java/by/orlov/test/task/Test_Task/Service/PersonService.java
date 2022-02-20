@@ -16,6 +16,7 @@ public class PersonService {
 
     public Person registerUser (Integer id, String login){
         if (login == null || id == null) {
+//            System.out.println("Был введён несуществующий ID валюты"); || id != 90 || id != 80 || id != 48543
             return null;
         } else {
             if (personRepository.findFirstByLoginAndId (login, id).isPresent()){
@@ -28,12 +29,15 @@ public class PersonService {
             person.setChangePrice(false);
             if (person.getId() == 90){
                 person.setPriceWhenRegistration(priceRepository.findById(1).get().getPrice_usd());
+                return personRepository.save(person);
             }else if (person.getId() == 80){
                 person.setPriceWhenRegistration(priceRepository.findById(2).get().getPrice_usd());
+                return personRepository.save(person);
             }else if (person.getId() == 48543){
                 person.setPriceWhenRegistration(priceRepository.findById(3).get().getPrice_usd());
+                return personRepository.save(person);
             }
-            return personRepository.save(person);
+            return null;
         }
     }
 }

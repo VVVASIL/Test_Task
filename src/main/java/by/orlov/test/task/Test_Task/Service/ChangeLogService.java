@@ -26,10 +26,10 @@ public class ChangeLogService {
                 personList) {
             if ((priceRepository.findById(1).get().getPrice_usd() -
                     p.getPriceWhenRegistration())/
-                    p.getPriceWhenRegistration() * 100 < -1 && p.getId() == 90 && p.isChangePrice() ||
+                    p.getPriceWhenRegistration() * 100 < -1 && p.getId() == 90 && !p.changePrice ||
                     (priceRepository.findById(1).
                     get().getPrice_usd() - p.getPriceWhenRegistration() )/
-                    p.getPriceWhenRegistration() * 100 > 1 && p.getId() == 90 && p.isChangePrice()){
+                    p.getPriceWhenRegistration() * 100 > 1 && p.getId() == 90 && !p.changePrice){
                 logger.warning("Цена изменилась на 1% у пользователя: " + p.getLogin() +
                         ". Код валюты: " + p.getId() +
                         ". Процент изменения цены: " +
@@ -37,30 +37,33 @@ public class ChangeLogService {
                         p.getPriceWhenRegistration() )/
                         p.getPriceWhenRegistration() * 100);
                 p.setChangePrice(true);
+                personRepository.save(p);
             }else if ((priceRepository.findById(2).get().getPrice_usd() -
                     p.getPriceWhenRegistration())/
-                    p.getPriceWhenRegistration() * 100 < -1 && p.getId() == 80 && p.isChangePrice()||
+                    p.getPriceWhenRegistration() * 100 < -1 && p.getId() == 80 && !p.changePrice||
                     (priceRepository.findById(2).
                     get().getPrice_usd() - p.getPriceWhenRegistration() )/
-                    p.getPriceWhenRegistration() * 100 > 1 && p.getId() == 80 && p.isChangePrice()) {
+                    p.getPriceWhenRegistration() * 100 > 1 && p.getId() == 80 && !p.changePrice) {
                 logger.warning("Цена изменилась на 1% у пользователя: " + p.getLogin() +
                         ". Код валюты: " + p.getId() +
                         ". Процент изменения цены: " + (priceRepository.findById(2).
                         get().getPrice_usd() - p.getPriceWhenRegistration() )/
                         p.getPriceWhenRegistration() * 100);
                 p.setChangePrice(true);
+                personRepository.save(p);
             }else if ((priceRepository.findById(3).get().getPrice_usd() -
                     p.getPriceWhenRegistration())/
-                    p.getPriceWhenRegistration() * 100 < -1 && p.getId() == 48543 && p.isChangePrice()||
+                    p.getPriceWhenRegistration() * 100 < -1 && p.getId() == 48543 && !p.isChangePrice()||
                     (priceRepository.findById(3).
                     get().getPrice_usd() - p.getPriceWhenRegistration() )/
-                    p.getPriceWhenRegistration() * 100 > 1 && p.getId() == 48543 && p.isChangePrice()) {
+                    p.getPriceWhenRegistration() * 100 > 1 && p.getId() == 48543 && !p.isChangePrice()) {
                 logger.warning("Цена изменилась на 1% у пользователя: " + p.getLogin() +
                         ". Код валюты: " + p.getId() +
                         ". Процент изменения цены: " + (priceRepository.findById(3).
                         get().getPrice_usd() - p.getPriceWhenRegistration() )/
                         p.getPriceWhenRegistration() * 100);
                 p.setChangePrice(true);
+                personRepository.save(p);
             }
         }
     }
