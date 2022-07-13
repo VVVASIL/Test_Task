@@ -1,11 +1,11 @@
-package by.orlov.test.task.Test_Task.Controller;
+package by.orlov.test.task.Test_Task.controller;
 
-import by.orlov.test.task.Test_Task.Entity.CoinsAll;
-import by.orlov.test.task.Test_Task.Entity.Person;
-import by.orlov.test.task.Test_Task.Entity.Price;
-import by.orlov.test.task.Test_Task.Repository.CoinsRepository;
-import by.orlov.test.task.Test_Task.Repository.PriceRepository;
-import by.orlov.test.task.Test_Task.Service.PersonService;
+import by.orlov.test.task.Test_Task.entity.CoinsAll;
+import by.orlov.test.task.Test_Task.entity.Person;
+import by.orlov.test.task.Test_Task.entity.Price;
+import by.orlov.test.task.Test_Task.repository.CoinsRepository;
+import by.orlov.test.task.Test_Task.repository.PriceRepository;
+import by.orlov.test.task.Test_Task.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

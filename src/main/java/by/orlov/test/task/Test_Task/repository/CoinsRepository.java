@@ -1,6 +1,6 @@
-package by.orlov.test.task.Test_Task.Repository;
+package by.orlov.test.task.Test_Task.repository;
 
-import by.orlov.test.task.Test_Task.Entity.CoinsAll;
+import by.orlov.test.task.Test_Task.entity.CoinsAll;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

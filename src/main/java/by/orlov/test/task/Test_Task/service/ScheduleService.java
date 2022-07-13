@@ -1,6 +1,6 @@
-package by.orlov.test.task.Test_Task.Service;
+package by.orlov.test.task.Test_Task.service;
 
-import by.orlov.test.task.Test_Task.Entity.Price;
+import by.orlov.test.task.Test_Task.entity.Price;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;

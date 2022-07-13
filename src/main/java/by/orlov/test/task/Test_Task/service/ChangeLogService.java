@@ -1,8 +1,8 @@
-package by.orlov.test.task.Test_Task.Service;
+package by.orlov.test.task.Test_Task.service;
 
-import by.orlov.test.task.Test_Task.Entity.Person;
-import by.orlov.test.task.Test_Task.Repository.PersonRepository;
-import by.orlov.test.task.Test_Task.Repository.PriceRepository;
+import by.orlov.test.task.Test_Task.entity.Person;
+import by.orlov.test.task.Test_Task.repository.PersonRepository;
+import by.orlov.test.task.Test_Task.repository.PriceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;

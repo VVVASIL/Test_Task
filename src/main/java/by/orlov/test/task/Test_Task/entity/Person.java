@@ -1,4 +1,4 @@
-package by.orlov.test.task.Test_Task.Entity;
+package by.orlov.test.task.Test_Task.entity;
 
 import javax.persistence.*;
 
