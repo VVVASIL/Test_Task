@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "coins")
-public class CoinsAll {
+public class CoinsInformation {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,9 +15,9 @@ public class CoinsAll {
     @Column(name = "symbol")
     private String symbol;
 
-    public CoinsAll() {
+    public CoinsInformation() {
     }
-    public CoinsAll(int symbolId, String symbol) {
+    public CoinsInformation(int symbolId, String symbol) {
         this.symbolId = symbolId;
         this.symbol = symbol;
     }

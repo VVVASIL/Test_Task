@@ -1,6 +1,6 @@
 package by.orlov.test.task.Test_Task.controller;
 
-import by.orlov.test.task.Test_Task.entity.CoinsAll;
+import by.orlov.test.task.Test_Task.entity.CoinsInformation;
 import by.orlov.test.task.Test_Task.entity.Person;
 import by.orlov.test.task.Test_Task.entity.Price;
 import by.orlov.test.task.Test_Task.repository.CoinsRepository;
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import java.util.List;
 
 @Controller
-public class FirstController {
+public class MainController {
     @Autowired
     private CoinsRepository coinsRepository;
     @Autowired
@@ -30,8 +30,8 @@ public class FirstController {
     }
     @GetMapping ("/info")
     public String showAllCoins(Model model){
-        List<CoinsAll> coinsAllList = coinsRepository.findAll();
-        model.addAttribute("coinsInfo", coinsAllList);
+        List<CoinsInformation> coinsInformationList = coinsRepository.findAll();
+        model.addAttribute("coinsInfo", coinsInformationList);
         return "show-info";
     }
     @GetMapping("/price")

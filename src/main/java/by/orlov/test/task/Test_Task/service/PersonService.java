@@ -6,6 +6,9 @@ import by.orlov.test.task.Test_Task.repository.PriceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class PersonService {
 
@@ -16,7 +19,6 @@ public class PersonService {
 
     public Person registerUser (Integer id, String login){
         if (login == null || id == null) {
-//            System.out.println("Был введён несуществующий ID валюты"); || id != 90 || id != 80 || id != 48543
             return null;
         } else {
             if (personRepository.findFirstByLoginAndId (login, id).isPresent()){

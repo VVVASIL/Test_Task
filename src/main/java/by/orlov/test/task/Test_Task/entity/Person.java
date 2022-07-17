@@ -1,7 +1,8 @@
 package by.orlov.test.task.Test_Task.entity;
 
-import javax.persistence.*;
+import lombok.Builder;
 
+import javax.persistence.*;
 @Entity
 @Table
 public class Person {
